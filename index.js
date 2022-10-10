@@ -20,7 +20,9 @@ const game_logic = (users_number) => {
     console.log('Congrats, you got it!');
     // foundCorrectNumber = true;
     level = level + 1 ;
+    range_limit = range_limit + 1 ;
     console.log('New Level Unlocked' , level);
+    console.log('Range limit has been increased to !' , range_limit);
   } else {
     console.log('Sorry, guess again!');
   }
@@ -38,10 +40,7 @@ const game_engine = () => {
   while (!foundCorrectNumber) {
     let users_choice = query_User();
     game_logic(users_choice);
-     if (level >= 2)
-     {
-       range_limit = range_limit + 1 ;
-     }
+     
   }
 }
 
